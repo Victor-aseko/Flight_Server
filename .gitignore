@@ -1,6 +1,7 @@
 node_modules
 # dist
 # .vercel
-.vercel
+
 utils
 MOCK_DATA.json
+.vercel
