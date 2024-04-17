@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const flight_1 = require("../controllers/flight");
+const router = express_1.default.Router();
+router.post("/search", flight_1.searchFlight);
+router.post("/create-booking", flight_1.createBooking);
+router.post("/update-flight", flight_1.updateFlight);
+router.get("/get-flights", flight_1.getFlights);
+router.post("/inquire-delete", flight_1.inquireDelete);
+router.post("/inquire-edit", flight_1.inquireEdit);
+router.post("/delete", flight_1.deleteBooking);
+router.get("/get-summary/:email", flight_1.getSummary);
+router.get("/jobs", flight_1.getJobs);
+router.post("/create-application", flight_1.createApplication);
+router.post("/update-application", flight_1.updateApplication);
+exports.default = router;
